@@ -24,7 +24,6 @@ private:
 	std::vector<std::vector<bool>> m_gameGrid;
 	int m_activeRow = 0;
 	int m_activeCol = 0;
-	bool m_shapeChanged = false;
 	TetrominoShape m_currentTetromino;
 	TetrominoShape m_previousTetromino;
 };
