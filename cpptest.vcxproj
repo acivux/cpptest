@@ -76,10 +76,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\code\cpptest\cpptest;C:\code\cpptest\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\code\cpptest\cpptest;C:\code\cpptest\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\code\cpptest\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\code\cpptest\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-main.lib;sfml-system.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -134,17 +134,17 @@
     <ClCompile Include="TetrominoZ.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\SFML-2.4.2\bin\openal32.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-audio-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-audio-d-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-graphics-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-graphics-d-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-network-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-network-d-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-system-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-system-d-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-window-2.dll" />
-    <None Include="..\SFML-2.4.2\bin\sfml-window-d-2.dll" />
+    <None Include="..\SFML\bin\openal32.dll" />
+    <None Include="..\SFML\bin\sfml-audio-2.dll" />
+    <None Include="..\SFML\bin\sfml-audio-d-2.dll" />
+    <None Include="..\SFML\bin\sfml-graphics-2.dll" />
+    <None Include="..\SFML\bin\sfml-graphics-d-2.dll" />
+    <None Include="..\SFML\bin\sfml-network-2.dll" />
+    <None Include="..\SFML\bin\sfml-network-d-2.dll" />
+    <None Include="..\SFML\bin\sfml-system-2.dll" />
+    <None Include="..\SFML\bin\sfml-system-d-2.dll" />
+    <None Include="..\SFML\bin\sfml-window-2.dll" />
+    <None Include="..\SFML\bin\sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />

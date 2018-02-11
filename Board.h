@@ -13,6 +13,7 @@ public:
 private:
 	int columns, rows, blocksize;
 	std::vector<std::vector<Block>> m_displayGrid;
-	int m_currentDisplayRow, m_currentDisplayCol = 0;
+	int m_currentDisplayRow = 0;
+	int m_currentDisplayCol = 0;
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 };

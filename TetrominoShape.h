@@ -16,8 +16,13 @@ public:
 	int GetShapeRows();
 	int GetShapeCols();
 	std::vector<std::vector<bool>> GetShape();
+	void RotateRight();
+	void RotateLeft();
 private:
+	void TransposeShape();
+	void SwapRows();
 	std::vector<std::vector<bool>> m_shapeData;
 	sf::Color m_color;
+	int m_orientation;
 };
 
