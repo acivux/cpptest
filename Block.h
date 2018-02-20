@@ -7,6 +7,7 @@ public:
 	Block();
 	Block(float x, float y, float blocksize);
 	void SetColor(sf::Color newcolor);
+	sf::Color GetColor();
 	~Block();
 private:
 	void InitBlock();

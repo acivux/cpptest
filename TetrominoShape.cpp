@@ -53,12 +53,12 @@ void TetrominoShape::RotateLeft()
 
 void TetrominoShape::TransposeShape()
 {
-	std::vector<std::vector<bool>> outtrans(m_shapeData[0].size(), std::vector<bool>(m_shapeData.size()));
+	std::vector<std::vector<bool>> newShape(m_shapeData[0].size(), std::vector<bool>(m_shapeData.size()));
 	for (size_t i = 0; i < m_shapeData.size(); ++i)
 		for (size_t j = 0; j < m_shapeData[0].size(); ++j)
-			outtrans[j][i] = m_shapeData[i][j];
+			newShape[j][i] = m_shapeData[i][j];
 
-	m_shapeData = outtrans;
+	m_shapeData = newShape;
 }
 
 void TetrominoShape::SwapRows()

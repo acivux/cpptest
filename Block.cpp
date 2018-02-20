@@ -21,6 +21,11 @@ void Block::SetColor(sf::Color newcolor)
 	block.setFillColor(newcolor);
 }
 
+sf::Color Block::GetColor()
+{
+	return block.getFillColor();
+}
+
 void Block::InitBlock()
 {
 	linecolor = sf::Color::Black;

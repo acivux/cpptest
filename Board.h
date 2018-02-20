@@ -9,6 +9,8 @@ public:
 	void SetBlockColor(int row, int col, sf::Color);
 	void EraseShape(std::vector<std::vector<bool>> shape, int activeRow, int activeCol);
 	void DrawShape(std::vector<std::vector<bool>> shape, sf::Color, int activeRow, int activeCol);
+	void LockShape(std::vector<std::vector<bool>> shape, sf::Color, int activeRow, int activeCol);
+	void SquashRow(int row);
 	~Board();
 private:
 	int columns, rows, blocksize;

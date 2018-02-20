@@ -8,7 +8,7 @@ Board::Board(int rowcount, int colcount, int block_size)
 	rows = rowcount;
 	blocksize = block_size;
 	m_displayGrid.resize(rows);
-
+	float xOffset = 400 - columns * blocksize;
 	for (int i = 0; i < rowcount; i++)
 		m_displayGrid[i].resize(colcount);
 
@@ -16,7 +16,7 @@ Board::Board(int rowcount, int colcount, int block_size)
 	{
 		for (int col = 0; col < m_displayGrid[row].size(); col++)
 		{
-			Block b(static_cast<float>(row * blocksize), static_cast<float>(col * blocksize), static_cast<float>(blocksize));
+			Block b(static_cast<float>(row * blocksize), static_cast<float>(col * blocksize + xOffset), static_cast<float>(blocksize));
 			m_displayGrid[row][col] = b;
 		}
 	}
@@ -57,5 +57,26 @@ void Board::DrawShape(std::vector<std::vector<bool>> shape, sf::Color color, int
 			if (shape[row][col])
 				SetBlockColor(activeRow + row, activeCol + col, color);
 		}
+	}
+}
+
+void Board::LockShape(std::vector<std::vector<bool>> shape, sf::Color color, int activeRow, int activeCol)
+{
+	for (int row = 0; row < shape.size(); row++)
+	{
+		for (int col = 0; col < shape[0].size(); col++)
+		{
+			if (shape[row][col])
+				SetBlockColor(activeRow + row, activeCol + col, color);
+		}
+	}
+}
+
+void Board::SquashRow(int row)
+{
+	for (int rows = row; rows > 0; rows--)
+	{
+		for (int cols = 0; cols < m_displayGrid[0].size(); cols++)
+			m_displayGrid[rows][cols].SetColor(m_displayGrid[rows - 1][cols].GetColor());
 	}
 }
